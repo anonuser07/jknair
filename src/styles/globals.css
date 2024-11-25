@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;600;700&family=Fjalla+One:wght@400;500;600;700&family=Merriweather:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  @apply antialiased;
+}
+
+:root {
+  /* #region  /**=========== Primary Color =========== */
+  /* !STARTERCONF Customize these variable, copy and paste from /styles/colors.css for list of colors */
+  --tw-color-primary-50: 240 249 255;
+  --tw-color-primary-100: 224 242 254;
+  --tw-color-primary-200: 186 230 253;
+  --tw-color-primary-300: 125 211 252;
+  --tw-color-primary-400: 56 189 248;
+  --tw-color-primary-500: 14 165 233;
+  --tw-color-primary-600: 2 132 199;
+  --tw-color-primary-700: 3 105 161;
+  --tw-color-primary-800: 7 89 133;
+  --tw-color-primary-900: 12 74 110;
+  --color-primary-50: rgb(var(--tw-color-primary-50)); /* #f0f9ff */
+  --color-primary-100: rgb(var(--tw-color-primary-100)); /* #e0f2fe */
+  --color-primary-200: rgb(var(--tw-color-primary-200)); /* #bae6fd */
+  --color-primary-300: rgb(var(--tw-color-primary-300)); /* #7dd3fc */
+  --color-primary-400: rgb(var(--tw-color-primary-400)); /* #38bdf8 */
+  --color-primary-500: rgb(var(--tw-color-primary-500)); /* #0ea5e9 */
+  --color-primary-600: rgb(var(--tw-color-primary-600)); /* #0284c7 */
+  --color-primary-700: rgb(var(--tw-color-primary-700)); /* #0369a1 */
+  --color-primary-800: rgb(var(--tw-color-primary-800)); /* #075985 */
+  --color-primary-900: rgb(var(--tw-color-primary-900)); /* #0c4a6e */
+  /* #endregion  /**======== Primary Color =========== */
+}
+
+@layer base {
+  /* #region  /**=========== Typography =========== */
+  .h0 {
+    @apply font-heading text-3xl font-bold md:text-5xl;
+  }
+
+  h1,
+  .h1 {
+    @apply font-heading text-2xl font-bold md:text-4xl;
+  }
+
+  h2,
+  .h2 {
+    @apply font-heading text-xl font-bold md:text-3xl;
+  }
+
+  h3,
+  .h3 {
+    @apply font-heading text-lg font-bold md:text-2xl;
+  }
+
+  h4,
+  .h4 {
+    @apply font-heading text-base font-bold md:text-lg;
+  }
+
+  body,
+  .p {
+    @apply font-primary text-sm md:text-base;
+  }
+  /* #endregion  /**======== Typography =========== */
+
+  .layout {
+    /* 1100px */
+    max-width: 68.75rem;
+    @apply mx-auto w-11/12;
+  }
+
+  .bg-dark a.custom-link {
+    @apply border-gray-200 hover:border-gray-200/0;
+  }
+
+  /* Class to adjust with sticky footer */
+  .min-h-main {
+    @apply min-h-[calc(100vh-56px)];
+  }
+}
+
+.heading {
+  font-variant: petite-caps;
+  @apply tracking-wide;
+}
+
+.multi-waves-shape-divider-bottom-1714576883 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.multi-waves-shape-divider-bottom-1714576883 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 20px;
+  transform: rotateY(180deg);
+}
+
+.multi-waves-shape-divider-bottom-1714576883 .shape-fill {
+  fill: #ffffff;
+}
+
+.wavy-shape-divider-top-1717304225 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.wavy-shape-divider-top-1717304225 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 24px;
+}
+
+.wavy-shape-divider-top-1717304225 .shape-fill {
+  fill: #ffffff;
+}
+
+.wavy-shape-divider-bottom-1717304353 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.wavy-shape-divider-bottom-1717304353 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 24px;
+}
+
+.wavy-shape-divider-bottom-1717304353 .shape-fill {
+  fill: #ffffff;
+}
+
+.slider::before,
+.slider::after {
+  background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+  content: '';
+  height: 100px;
+  position: absolute;
+  width: 150px;
+  z-index: 2;
+}
+.slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+.slider::before {
+  left: 0;
+  top: 0;
+}
+
+.slide-track {
+  animation: scroll 20s linear infinite;
+  /* display: flex;
+  gap: 16px;
+  margin-bottom: 16px; */
+  width: calc((100px * 18 + 16px * 17) * 2);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc((100px * -18 + 16px * -17)));
+  }
+}
